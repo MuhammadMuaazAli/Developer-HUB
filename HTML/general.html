@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General Programming — Developer HUB</title>
+  <link rel="stylesheet" href="/CSS/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/index.html"><span class="logo-icon"><i class="fas fa-code"></i></span><span>Developer HUB</span></a>
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" data-active="general">
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="active" href="/HTML/general.html"><i class="fas fa-laptop-code"></i> General</a></li>
+        <li><a href="/HTML/dsa.html"><i class="fas fa-project-diagram"></i> DSA</a></li>
+        <li><a href="/HTML/web.html"><i class="fas fa-globe"></i> Web</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-header">
+    <h1><i class="fas fa-laptop-code"></i> General Programming</h1>
+    <p class="muted">Language-agnostic concepts that make you a better developer.</p>
+  </section>
+
+  <main class="container">
+    <section class="content-section">
+      <h2><i class="fas fa-puzzle-piece"></i> Core Concepts</h2>
+      <ul>
+        <li>Variables, types, and memory model (value vs reference)</li>
+        <li>Control flow: conditionals, loops, early returns, guard clauses</li>
+        <li>Functions: pure vs impure, parameters, return values</li>
+        <li>Error handling: exceptions, result types, defensive coding</li>
+        <li>IO basics: files, streams, HTTP requests</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-bug"></i> Debugging Mindset</h2>
+      <ul>
+        <li>Reproduce consistently, reduce scope, add logs/assertions</li>
+        <li>Binary search your code path; isolate side effects</li>
+        <li>Write minimal failing examples; then patch</li>
+      </ul>
+      <pre class="code-block">// Pseudocode for binary-search debugging
+while(bug){
+  cut_scope_in_half();
+  if(bug_in_left) keep_left(); else keep_right();
+}</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-tasks"></i> Clean Code Principles</h2>
+      <ul>
+        <li>Small, single-purpose functions</li>
+        <li>Good names & consistent style</li>
+        <li>Comments for <em>why</em>, not <em>what</em></li>
+        <li>Write tests for critical paths</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="footer-brand">Developer HUB</h2>
+    <p>Created with ❤️ by <strong>Code With Muaaz</strong></p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@codewithmuaaz" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://codewithmuaaz.online" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/codewithmuaaz" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="/Js/script.js"></script>
+</body>
+</html>

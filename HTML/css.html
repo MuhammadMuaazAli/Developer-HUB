@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Styling — Developer HUB</title>
+  <link rel="stylesheet" href="/CSS/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/index.html"><span class="logo-icon"><i class="fas fa-code"></i></span><span>Developer HUB</span></a>
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" data-active="css">
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/HTML/html.html"><i class="fab fa-html5"></i> HTML</a></li>
+        <li><a class="active" href="/HTML/css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+        <li><a href="/HTML/web.html"><i class="fas fa-globe"></i> Web</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-header">
+    <h1><i class="fab fa-css3-alt"></i> CSS Styling</h1>
+    <p class="muted">Make it responsive, accessible, and beautiful.</p>
+  </section>
+
+  <main class="container">
+    <section class="content-section">
+      <h2><i class="fas fa-layer-group"></i> Core Concepts</h2>
+      <ul>
+        <li>Specificity, cascade, and inheritance</li>
+        <li>Box model: <code>content + padding + border + margin</code></li>
+        <li>Responsive units: <code>rem</code>, <code>vw</code>, <code>%</code>, <code>clamp()</code></li>
+      </ul>
+      <pre class="code-block">.card {
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+}</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-arrows-alt"></i> Flexbox</h2>
+      <pre class="code-block">.row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-th"></i> CSS Grid</h2>
+      <pre class="code-block">.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-magic"></i> Transitions & Animations</h2>
+      <pre class="code-block">.btn {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(59,130,246,.4);
+}</pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="footer-brand">Developer HUB</h2>
+    <p>Created with ❤️ by <strong>Code With Muaaz</strong></p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@codewithmuaaz" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://codewithmuaaz.online" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/codewithmuaaz" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="/Js/script.js"></script>
+</body>
+</html>

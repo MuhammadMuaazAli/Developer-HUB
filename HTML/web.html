@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Development Roadmap — Developer HUB</title>
+  <link rel="stylesheet" href="/CSS/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/index.html"><span class="logo-icon"><i class="fas fa-code"></i></span><span>Developer HUB</span></a>
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" data-active="web">
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/HTML/html.html"><i class="fab fa-html5"></i> HTML</a></li>
+        <li><a href="/HTML/css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+        <li><a class="active" href="/HTML/web.html"><i class="fas fa-globe"></i> Web</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-header">
+    <h1><i class="fas fa-globe"></i> Web Development Roadmap</h1>
+    <p class="muted">From frontend to backend to deployment — the complete picture.</p>
+  </section>
+
+  <main class="container">
+    <section class="content-section">
+      <h2><i class="fas fa-code"></i> Frontend</h2>
+      <ul>
+        <li>HTML (semantic), CSS (Flexbox/Grid), JavaScript (ES6+)</li>
+        <li>Build responsive UIs; accessibility and performance basics</li>
+        <li>Package tools: Vite, bundlers; npm scripts</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-server"></i> Backend</h2>
+      <ul>
+        <li>Node.js + Express routing, middleware, auth (JWT)</li>
+        <li>Databases: MongoDB (Mongoose) or SQL (PostgreSQL/MySQL)</li>
+        <li>REST API design: resources, status codes, validation</li>
+      </ul>
+      <pre class="code-block">// Express boilerplate
+import express from "express";
+const app = express();
+app.use(express.json());
+app.get("/api/health", (req,res)=>res.json({ok:true}));
+app.listen(8000, ()=>console.log("Server on 8000"));</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-cloud-upload-alt"></i> Deployment</h2>
+      <ul>
+        <li>Static hosting (Netlify, Vercel), Servers (VPS), Containers (Docker)</li>
+        <li>Env configs, logs, monitoring; CI/CD basics</li>
+        <li>Security: HTTPS, CORS, rate limiting</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="footer-brand">Developer HUB</h2>
+    <p>Created with ❤️ by <strong>Code With Muaaz</strong></p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@codewithmuaaz" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://codewithmuaaz.online" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/codewithmuaaz" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="/Js/script.js"></script>
+</body>
+</html>

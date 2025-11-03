@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Programming — Developer HUB</title>
+  <link rel="stylesheet" href="/CSS/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/index.html">
+        <span class="logo-icon"><i class="fas fa-code"></i></span>
+        <span>Developer HUB</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks" data-active="python">
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/HTML/html.html"><i class="fab fa-html5"></i> HTML</a></li>
+        <li><a href="/HTML/css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+        <li><a href="/HTML/web.html"><i class="fas fa-globe"></i> Web</a></li>
+        <li><a class="active" href="/HTML/python.html"><i class="fab fa-python"></i> Python</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-header">
+    <h1><i class="fab fa-python"></i> Python Programming</h1>
+    <p class="muted">Simple syntax. Powerful capabilities. Endless possibilities.</p>
+  </section>
+
+  <main class="container">
+    <section class="content-section">
+      <h2><i class="fas fa-lightbulb"></i> Introduction to Python</h2>
+      <p>
+        Python is one of the most beginner-friendly yet powerful programming languages in the world.
+        It’s widely used for web development, automation, data science, AI, and more.
+      </p>
+      <pre class="code-block"># Hello World in Python
+print("Welcome to Developer HUB")</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-database"></i> Variables & Data Types</h2>
+      <p>
+        Python supports various data types such as integers, floats, strings, lists, tuples, sets, and dictionaries.
+      </p>
+      <pre class="code-block"># Variables and Data Types
+name = "Muaaz"
+age = 20
+skills = ["HTML", "CSS", "Python", "JavaScript"]
+
+print(f"My name is {name}, and I’m {age} years old.")
+print("Skills:", skills)</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-code-branch"></i> Conditional Statements</h2>
+      <p>
+        Control the flow of your program using <code>if</code>, <code>elif</code>, and <code>else</code> statements.
+      </p>
+      <pre class="code-block"># Conditional Example
+score = 85
+
+if score >= 90:
+    print("Excellent!")
+elif score >= 75:
+    print("Good job!")
+else:
+    print("Keep improving!")</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-sync-alt"></i> Loops</h2>
+      <p>
+        Loops allow you to run a block of code multiple times. Python supports both <code>for</code> and <code>while</code> loops.
+      </p>
+      <pre class="code-block"># For Loop Example
+for i in range(1, 6):
+    print(f"Iteration {i}")</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-cogs"></i> Functions</h2>
+      <p>
+        Functions make your code reusable and organized. Use the <code>def</code> keyword to define a function.
+      </p>
+      <pre class="code-block"># Function Example
+def greet(name):
+    return f"Hello, {name}! Welcome to Developer HUB."
+
+print(greet("Muaaz"))</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-brain"></i> Object-Oriented Programming (OOP)</h2>
+      <p>
+        Python supports object-oriented programming with classes and objects, promoting modular and reusable code.
+      </p>
+      <pre class="code-block"># Class Example
+class Developer:
+    def __init__(self, name, language):
+        self.name = name
+        self.language = language
+
+    def intro(self):
+        return f"I’m {self.name}, and I code in {self.language}."
+
+dev = Developer("Muaaz", "Python")
+print(dev.intro())</pre>
+    </section>
+
+    <section class="content-section">
+      <h2><i class="fas fa-robot"></i> Advanced Topics</h2>
+      <ul>
+        <li>Modules and Packages</li>
+        <li>File Handling</li>
+        <li>Exception Handling</li>
+        <li>Decorators and Generators</li>
+        <li>Working with APIs</li>
+        <li>Introduction to Machine Learning</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="footer-brand">Developer HUB</h2>
+    <p>Created with ❤️ by <strong>Code With Muaaz</strong></p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@codewithmuaaz" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://codewithmuaaz.online" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/codewithmuaaz" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="/Js/script.js"></script>
+</body>
+</html>
