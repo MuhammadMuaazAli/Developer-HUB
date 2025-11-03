@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>C++ Programming — Developer HUB</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../CSS/style.css">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
@@ -40,22 +37,129 @@
 <main class="container">
   <section class="content-section">
     <h2><i class="fas fa-book-open"></i> Getting Started</h2>
-    <pre class="code-block">#include &lt;bits/stdc++.h&gt;
+    <p>C++ is a powerful, high-performance language that serves as the backbone for game engines, operating systems, and high-frequency trading applications. It gives you **direct control over system resources** and memory, which is why understanding the compilation process is key.</p>
+    <pre class="code-block">#include &lt;iostream&gt; // Prefer &lt;iostream&gt; over &lt;bits/stdc++.h&gt; for standard practice
 using namespace std;
-int main(){ cout &lt;&lt; "Hello, Developer HUB!\\n"; }</pre>
+
+int main() {
+    cout &lt;&lt; "Hello, Developer HUB!" &lt;&lt; endl; // Use endl for flushing output
+    return 0; // Standard practice for success
+}</pre>
     <ul>
-      <li>Understand <code>compile → link → run</code></li>
-      <li>Use <code>g++ -std=c++17 -O2 main.cpp -o app</code></li>
+      <li>Understand **<code>compile → link → run</code>**: Your source code is compiled into machine code, linked with necessary libraries, and then executed.</li>
+      <li>Use **<code>g++ -std=c++17 -O2 main.cpp -o app</code>**: This command compiles `main.cpp`, enables C++17 features, applies optimization level 2, and names the output executable `app`.</li>
     </ul>
   </section>
 
+  <hr>
+
   <section class="content-section">
     <h2><i class="fas fa-object-group"></i> OOP Essentials</h2>
-    <pre class="code-block">struct User{
-  string name; int age;
-  void greet() { cout &lt;&lt; "Hi " &lt;&lt; name; }
-};</pre>
+    <p>Object-Oriented Programming (OOP) in C++ revolves around the concepts of **Classes and Objects**. A class is a blueprint, and an object is an instance of that blueprint.</p>
+    <pre class="code-block">class User { // Prefer 'class' for OOP constructs
+private:
+    string name;
+    int age;
+public:
+    // Constructor
+    User(string n, int a) : name(n), age(a) {} 
+
+    // Public Method
+    void greet() const { 
+        cout &lt;&lt; "Hi " &lt;&lt; name &lt;&lt; ", you are " &lt;&lt; age &lt;&lt; " years old.\n"; 
+    }
+    
+    // Accessor (Getter)
+    string getName() const { return name; }
+};
+
+// Usage: User developer("Muaaz", 25); developer.greet();</pre>
+    <ul>
+      <li>**Encapsulation**: Bundling data (`name`, `age`) and methods (`greet`) that operate on the data into a single unit (the class). Use `private` and `public` access specifiers.</li>
+      <li>**Inheritance**: A mechanism where one class acquires the properties and methods of another.</li>
+      <li>**Polymorphism**: The ability of a function or method to take on multiple forms (often achieved through virtual functions and function overloading).</li>
+    </ul>
   </section>
+
+  <hr>
+
+  <section class="content-section">
+    <h2><i class="fas fa-microchip"></i> Pointers and Memory Management</h2>
+    <p>C++ offers **manual memory control**, a key feature that contributes to its performance. This involves understanding the **Stack** (for local variables) and the **Heap** (for dynamically allocated memory).</p>
+    <pre class="code-block">int value = 42;
+int* ptr = &amp;value; // Pointer stores the memory address of 'value'
+*ptr = 100;       // Dereferencing: changes the value at the address
+
+// Dynamic memory: must be explicitly deallocated
+int* dynamic_val = new int(50);
+// ... use dynamic_val ...
+delete dynamic_val; // FREE the allocated memory
+dynamic_val = nullptr; // Good practice to avoid dangling pointers</pre>
+    <ul>
+      <li>**Pointers (`*`)**: Variables that store memory addresses. Essential for working with arrays, dynamic memory, and optimizing function calls.</li>
+      <li>**References (`&amp;`)**: Aliases for existing variables. They must be initialized and cannot be reassigned. Often used for function parameters to avoid costly copying.</li>
+      <li>**Smart Pointers**: Modern C++ (C++11 and later) introduced `std::unique_ptr` and `std::shared_ptr` to manage heap memory automatically, significantly reducing memory leaks.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section class="content-section">
+    <h2><i class="fas fa-toolbox"></i> The Standard Template Library (STL)</h2>
+    <p>The STL is a massive collection of pre-written components (templates) that dramatically speed up development. It is organized into three main categories: **Containers, Algorithms, and Iterators**.</p>
+    
+    <h3>Containers 📦</h3>
+    <p>Containers are objects that store data. They manage the memory allocated to the objects they hold.</p>
+    <pre class="code-block">#include &lt;vector&gt;
+#include &lt;map&gt;
+
+std::vector&lt;int&gt; numbers = {10, 20, 30}; // Dynamic array
+numbers.push_back(40);
+
+std::map&lt;std::string, int&gt; ages; // Key-value pairs (sorted)
+ages["Alice"] = 30;</pre>
+    <ul>
+      <li>**Sequential**: `vector` (resizable array), `list` (doubly-linked list), `deque`.</li>
+      <li>**Associative**: `map` (sorted key-value), `set` (sorted unique elements), `unordered_map`/`unordered_set` (hash-based, faster average access).</li>
+      <li>**Container Adapters**: `stack`, `queue`, `priority_queue`.</li>
+    </ul>
+
+    <h3>Algorithms ⚙️</h3>
+    <p>Algorithms process the data stored in containers. They are generic and work with any container type.</p>
+    <pre class="code-block">#include &lt;algorithm&gt;
+#include &lt;numeric&gt;
+
+std::sort(numbers.begin(), numbers.end()); // Sorts the vector
+int sum = std::accumulate(numbers.begin(), numbers.end(), 0); // Calculates the sum</pre>
+    <ul>
+      <li>**Searching and Sorting**: `std::find`, `std::sort`, `std::binary_search`.</li>
+      <li>**Manipulating**: `std::transform`, `std::reverse`, `std::copy`.</li>
+    </ul>
+
+    <h3>Iterators 🧭</h3>
+    <p>Iterators act like pointers, allowing traversal through the elements of a container.</p>
+    <pre class="code-block">for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+    cout &lt;&lt; *it &lt;&lt; " ";
+}
+// Modern range-based for loop (uses iterators behind the scenes)
+for (int num : numbers) {
+    cout &lt;&lt; num &lt;&lt; " ";
+}</pre>
+  </section>
+
+  <hr>
+
+  <section class="content-section">
+    <h2><i class="fas fa-terminal"></i> Modern C++: Key Features</h2>
+    <p>C++ has evolved significantly with C++11, C++14, C++17, and C++20, adding features to make it safer, faster, and easier to write.</p>
+    <ul>
+      <li>**Lambda Functions**: Anonymous functions that can be defined inline. Perfect for short operations passed to algorithms like `std::sort`.</li>
+      <li>**`auto` Keyword**: Allows the compiler to automatically deduce the type of a variable, reducing boilerplate code (e.g., `auto num = 42;`).</li>
+      <li>**Concurrency (`&lt;thread&gt;`)**: Built-in support for multithreading, allowing you to run multiple tasks simultaneously.</li>
+      <li>**Concepts (C++20)**: Improve template programming by letting you specify requirements on template parameters, resulting in much cleaner error messages.</li>
+    </ul>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -68,7 +172,6 @@ int main(){ cout &lt;&lt; "Hello, Developer HUB!\\n"; }</pre>
   </div>
 </footer>
 
-<!-- JS -->
 <script src="../Js/script.js"></script>
 </body>
 </html>
